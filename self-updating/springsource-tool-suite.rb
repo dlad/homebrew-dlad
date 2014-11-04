@@ -1,10 +1,10 @@
 require 'formula'
 
 class SpringsourceToolSuite < Formula
-  url 'http://download.springsource.com/release/STS/3.4.0/dist/e4.3/spring-tool-suite-3.4.0.RELEASE-e4.3.1-macosx-cocoa-x86_64.tar.gz'
-  version '3.4.0'
+  url 'http://download.springsource.com/release/STS/3.6.2/dist/e4.4/spring-tool-suite-3.6.2.RELEASE-e4.4.1-macosx-cocoa-x86_64.tar.gz'
+  version '3.6.2'
   homepage 'http://spring.io/tools'
-  sha1 '2c62fc661c4978be91a524c02469b8e67754e610'
+  sha1 '9d7273646311d1753d6fc570c778b6760cb977d4'
 
   def shim_script target
     <<-EOS.undent
@@ -14,7 +14,7 @@ class SpringsourceToolSuite < Formula
   end
 
   def install
-    prefix.install Dir['sts-3.4.0.RELEASE/*']
+    prefix.install Dir['sts-3.6.2.RELEASE/*']
     (bin+'sts').write shim_script('STS.app')
   end
 end
